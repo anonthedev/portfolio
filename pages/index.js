@@ -173,6 +173,7 @@ export default function Home() {
                 </div>
               </a>
               <a
+              rel="noopener"
                 target="_blank"
                 href="https://github.com/anonthedev/vikings-mythbuster"
               >
@@ -206,6 +207,7 @@ export default function Home() {
                 </div>
               </a>
               <a
+              rel="noopener"
                 target="_blank"
                 href="https://github.com/anonthedev/netflix-clone"
               >
@@ -238,6 +240,7 @@ export default function Home() {
                 </div>
               </a>
               <a
+              rel="noopener"
                 target="_blank"
                 href="https://github.com/anonthedev/weather-app"
               >
