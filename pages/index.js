@@ -38,7 +38,7 @@ export default function Home() {
           </p>
           <div className="flex justify-center">
             <a
-              rel="noopener"
+              rel="noreferrer"
               target="_blank"
               href="https://twitter.com/Anonthedev"
               className="w-8 mr-5"
@@ -50,7 +50,7 @@ export default function Home() {
               />
             </a>
             <a
-              rel="noopener"
+              rel="noreferrer"
               href="https://github.com/anonthedev"
               target="_blank"
               className="w-8 mr-5"
@@ -62,7 +62,7 @@ export default function Home() {
               />
             </a>
             <a
-              rel="noopener"
+              rel="noreferrer"
               href="https://anondevblog.hashnode.dev"
               target="_blank"
               className="w-8 mr-5"
@@ -152,7 +152,7 @@ export default function Home() {
               data-aos="fade-up-right"
             >
               <a
-                rel="noopener"
+                rel="noreferrer"
                 target="_blank"
                 href="https://vikings-mythbuster.netlify.app/"
                 className="w-full block h-full shadow-lg"
@@ -173,7 +173,7 @@ export default function Home() {
                 </div>
               </a>
               <a
-              rel="noopener"
+              rel="noreferrer"
                 target="_blank"
                 href="https://github.com/anonthedev/vikings-mythbuster"
               >
@@ -185,7 +185,7 @@ export default function Home() {
               data-aos="fade-up-right"
             >
               <a
-                rel="noopener"
+                rel="noreferrer"
                 target="_blank"
                 href="https://anon-netflix-clone.netlify.app/"
                 className="w-full block h-full shadow-lg"
@@ -207,7 +207,7 @@ export default function Home() {
                 </div>
               </a>
               <a
-              rel="noopener"
+              rel="noreferrer"
                 target="_blank"
                 href="https://github.com/anonthedev/netflix-clone"
               >
@@ -219,7 +219,7 @@ export default function Home() {
               data-aos="fade-up-right"
             >
               <a
-                rel="noopener"
+                rel="noreferrer"
                 target="_blank"
                 href="https://anon-weather-app.netlify.app/"
                 className="w-full block h-full shadow-lg"
@@ -240,7 +240,7 @@ export default function Home() {
                 </div>
               </a>
               <a
-              rel="noopener"
+              rel="noreferrer"
                 target="_blank"
                 href="https://github.com/anonthedev/weather-app"
               >
@@ -252,7 +252,7 @@ export default function Home() {
               data-aos="fade-up-right"
             >
               <a
-                rel="noopener"
+                rel="noreferrer"
                 target="_blank"
                 href="https://text-speech-webapi.netlify.app/"
                 className="w-full block h-full shadow-lg"
@@ -274,7 +274,7 @@ export default function Home() {
                 </div>
               </a>
               <a
-                rel="noopener"
+                rel="noreferrer"
                 target="_blank"
                 href="https://github.com/anonthedev/text-to-speech-webAPI"
               >
@@ -286,7 +286,7 @@ export default function Home() {
               data-aos="fade-up-right"
             >
               <a
-                rel="noopener"
+                rel="noreferrer"
                 target="_blank"
                 href="https://chrome.google.com/webstore/detail/nordic-homepage/mnejdficbihlkhinkhfmdelhniemidff"
                 className="w-full block h-full shadow-lg"
@@ -308,7 +308,7 @@ export default function Home() {
                 </div>
               </a>
               <a
-                rel="noopener"
+                rel="noreferrer"
                 target="_blank"
                 href="https://github.com/anonthedev/nordic-homepage"
               >
@@ -320,7 +320,7 @@ export default function Home() {
               data-aos="fade-up-right"
             >
               <a
-                rel="noopener"
+                rel="noreferrer"
                 target="_blank"
                 href="https://github.com/anonthedev/newslit"
                 className="w-full block h-full shadow-lg"
@@ -342,7 +342,7 @@ export default function Home() {
                 </div>
               </a>
               <a
-                rel="noopener"
+                rel="noreferrer"
                 target="_blank"
                 href="https://github.com/anonthedev/newslit"
               >
