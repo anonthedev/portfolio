@@ -353,10 +353,6 @@ export default function Home() {
         </div>
       </div>
 
-      <div>
-        %[https://anondevblog.hashnode.dev/why-self-control-is-an-illusion]
-      </div>
-
       <footer>
         <p></p>
         <p className="text-slate-400 text-right mr-20 pb-4">
