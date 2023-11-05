@@ -94,3 +94,10 @@ body {
 .project-title {
   font-weight: 600;
 }
+
+@media only screen and (max-width: 1024px) {
+  .main-content {
+   width: 100vw;
+   padding: 0px 20px;
+  }
+}
