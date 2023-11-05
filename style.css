@@ -45,6 +45,17 @@ body {
     url("./resources/img/grid.png");
 }
 
+nav {
+  margin-top: 40px;
+}
+
+.nav-items {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
 .keywords {
   font-weight: 600;
 }
@@ -54,7 +65,7 @@ body {
   /* outline: 1px solid red; */
   text-align: left;
   font-family: "Poppins", sans-serif;
-  margin: 80px 0px 0px 0px;
+  
 }
 
 .hero-section {
@@ -62,6 +73,7 @@ body {
   flex-direction: column;
   gap: 20px;
   margin-bottom: 40px;
+  margin-top: 40px;
 }
 
 .circuit-img {
@@ -101,12 +113,12 @@ body {
 
 @media only screen and (max-width: 1024px) {
   .main-content {
-    width: calc(100vw/1.5);
+    width: calc(100vw / 1.5);
   }
 }
 
 @media only screen and (max-width: 768px) {
   .main-content {
-    width: calc(100vw/1.2);
+    width: calc(100vw / 1.2);
   }
 }
