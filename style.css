@@ -26,7 +26,7 @@
 
 a {
   text-decoration: none;
-  color: rgb(53, 127, 231);
+  color: #ffc42c;
 }
 
 body {
@@ -46,8 +46,7 @@ body {
 }
 
 .keywords {
-  color: #ffc42c;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .main-content {
