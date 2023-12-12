@@ -40,7 +40,7 @@ const projectsArray = [
     title: "Rush My Flight",
     imgSrc: "/images/rushmyflight.png",
     desc: "A freelance project wesbite where you can book flights, I handled the frontend on this project. Frontend built on Next & TS. [Project got abandoned]",
-    demoLink: "https://rushmyflight.vercel.app/",
+    demoLink: "https://rushmyflight.com/",
   },
   {
     title: "Likify",
