@@ -27,7 +27,7 @@ const projectsArray = [
     techStack: "Next.js, Tailwind, TS, ContextAPI",
     imgSrc: "/resources/img/youify.png",
     desc: "A website where you can convert your YouTube playlist to Spotify and vice versa.",
-    githubLink: "#",
+    githubLink: "https://github.com/anonthedev/youify",
     demoLink: "https://youify.xyz/",
   },
   {
@@ -46,6 +46,7 @@ const projectsArray = [
   },
   {
     title: "3D renderer",
+    techStack: "HTML, CSS, TS, BABYLON",
     imgSrc: "/resources/img/3d-renderer.png",
     desc: "A 3D renderer made in TS, it can render simple 3D objects in the HTML Canvas.",
     githubLink: "https://github.com/anonthedev/soft3Dengine",
@@ -61,6 +62,7 @@ const projectsArray = [
   },
   {
     title: "Screen Recorder",
+    techStack: "HTML, CSS, JS",
     imgSrc: "/resources/img/screen-recorder.png",
     desc: "A web based screen recorder that lets you record your screen and download it without having to create an account.",
     githubLink: "https://github.com/anonthedev/screen-recorder",
@@ -93,7 +95,11 @@ projectsArray.forEach((project, index) => {
   const h3 = document.createElement("h3");
   h3.className = "project-title";
   h3.textContent = `${project.title}`;
-  // h3.style.marginLeft = "-15px";
+
+  const span = document.createElement("span")
+  span.className = "project-tech-stack"
+  span.textContent = `${project.techStack}`
+
   const p = document.createElement("p");
   p.textContent = project.desc;
   p.className = "project-desc";
@@ -113,7 +119,7 @@ projectsArray.forEach((project, index) => {
 
   links.append(githubLink, demoLink);
 
-  detailsDiv.append(h3, p, links);
+  detailsDiv.append(h3, span, p, links);
 
   div.append(imgDiv, detailsDiv);
 
