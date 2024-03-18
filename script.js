@@ -23,45 +23,48 @@ const socialHandles = [
 
 const projectsArray = [
   {
-    title: "Youify",
-    imgSrc: "/images/youify.png",
+    title: "Youify (50+ MAUs)",
+    techStack: "Next.js, Tailwind, TS, ContextAPI",
+    imgSrc: "/resources/img/youify.png",
     desc: "A website where you can convert your YouTube playlist to Spotify and vice versa.",
     githubLink: "#",
     demoLink: "https://youify.xyz/",
   },
   {
-    title: "youdio",
-    // imgSrc: "/images/nordic-homepage-extension.png",
-    desc: "A webapp that let's you convert youtube to an online audio jukebox.",
-    demoLink:
-      "https://youdio.xyz",
+    title: "booksuno (300+ users)",
+    techStack: "Next.js, Tailwind, TS, Zustand",
+    imgSrc: "/resources/img/booksuno.png",
+    desc: "A webapp that let's you listen to audiobooks for free.",
+    demoLink: "https://booksuno.xyz",
   },
   {
     title: "Rush My Flight",
-    imgSrc: "/images/rushmyflight.png",
-    desc: "A freelance project wesbite where you can book flights, I handled the frontend on this project. Frontend built on Next & TS. [Project got abandoned]",
-    demoLink: "https://rushmyflight.vercel.app/",
+    techStack: "Next.js, Tailwind, TS, ContextAPI",
+    imgSrc: "/resources/img/rush-my-flight.png",
+    desc: "A freelance project wesbite where you can book flights, I handled the frontend on this project.",
+    demoLink: "https://rushmyflight.com/",
+  },
+  {
+    title: "3D renderer",
+    imgSrc: "/resources/img/3d-renderer.png",
+    desc: "A 3D renderer made in TS, it can render simple 3D objects in the HTML Canvas.",
+    githubLink: "https://github.com/anonthedev/soft3Dengine",
+    // demoLink: "https://blog-thumbnail-generator.netlify.app",
   },
   {
     title: "Likify",
-    imgSrc: "/images/likify.png",
+    imgSrc: "/resources/img/likify.png",
+    techStack: "Next.js, Tailwind, TS",
     desc: "A website where you can convert your liked songs collection to a shareable spotify playlist.",
     githubLink: "https://github.com/anonthedev/Likify",
     demoLink: "https://likify.vercel.app/",
   },
   {
     title: "Screen Recorder",
-    imgSrc: "/images/screen-recorder.png",
-    desc: "A web based screen recorder made using webRTC API, HTML, CSS & JS.",
+    imgSrc: "/resources/img/screen-recorder.png",
+    desc: "A web based screen recorder that lets you record your screen and download it without having to create an account.",
     githubLink: "https://github.com/anonthedev/screen-recorder",
     demoLink: "https://anon-screen-recorder.netlify.app/",
-  },
-  {
-    title: "Blog Thumbnail Generator",
-    imgSrc: "/images/blog-thumbnail.png",
-    desc: "Just a tool made to make blog thumbnails using HTML, CSS, JS (Canvas API).",
-    githubLink: "https://github.com/anonthedev/blog-thumbnail-generator",
-    demoLink: "https://blog-thumbnail-generator.netlify.app",
   },
 ];
 
@@ -76,32 +79,43 @@ socialHandles.forEach((social, index) => {
 
 projectsArray.forEach((project, index) => {
   const div = document.createElement("div");
-  div.style.display = "flex"
-  div.style.flexDirection = "column"
-  div.style.gap = "10px"
-  div.style.marginLeft = "15px"
-  div.style.color = "rgb(229, 231, 235)"
+  div.className = "project-div";
+
+  const imgDiv = document.createElement("div");
+  const img = document.createElement("img");
+  img.className = "project-img";
+  img.src = project.imgSrc;
+
+  imgDiv.append(img);
+
+  const detailsDiv = document.createElement("div");
+  detailsDiv.className = "project-details"
   const h3 = document.createElement("h3");
   h3.className = "project-title";
-  h3.textContent = `- ${project.title}`;
-  h3.style.marginLeft = "-15px"
+  h3.textContent = `${project.title}`;
+  // h3.style.marginLeft = "-15px";
   const p = document.createElement("p");
   p.textContent = project.desc;
-  const links = document.createElement("div")
-  links.className = "links"
+  p.className = "project-desc";
+
+  const links = document.createElement("div");
+  links.className = "links";
   const githubLink = document.createElement("a");
   githubLink.target = "_blank";
   githubLink.href = project.githubLink;
   githubLink.textContent = "github";
-  githubLink.style.display =  project.githubLink ? "block" : "none"
+  githubLink.style.display = project.githubLink ? "block" : "none";
   const demoLink = document.createElement("a");
   demoLink.target = "_blank";
   demoLink.href = project.demoLink;
   demoLink.textContent = "demo";
+  demoLink.style.display = project.demoLink ? "block" : "none";
 
   links.append(githubLink, demoLink);
 
-  div.append(h3, p, links);
+  detailsDiv.append(h3, p, links);
+
+  div.append(imgDiv, detailsDiv);
 
   projectsEl.appendChild(div);
 });
