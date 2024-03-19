@@ -53,6 +53,14 @@ const projectsArray = [
     // demoLink: "https://blog-thumbnail-generator.netlify.app",
   },
   {
+    title: "focustunes (200+ users)",
+    techStack: "Next.js, Tailwind, TS, Zustand",
+    imgSrc: "/resources/img/focustunes.png",
+    desc: "focustunes is a website where you can mix different sounds at different volumes to find the perfect sweet spot for yourself.",
+    githubLink: "https://github.com/anonthedev/soft3Dengine",
+    demoLink: "https://focustunes.vercel.app",
+  },
+  {
     title: "Likify",
     imgSrc: "/resources/img/likify.png",
     techStack: "Next.js, Tailwind, TS",
