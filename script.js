@@ -95,6 +95,7 @@ projectsArray.forEach((project, index) => {
   const img = document.createElement("img");
   img.className = "project-img";
   img.src = project.imgSrc;
+  img.loading = "lazy";
 
   imgDiv.append(img);
 
