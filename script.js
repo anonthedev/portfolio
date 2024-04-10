@@ -31,7 +31,7 @@ const projectsArray = [
     demoLink: "https://youify.xyz/",
   },
   {
-    title: "booksuno (300+ users)",
+    title: "booksuno (700+ users)",
     techStack: "Next.js, Tailwind, TS, Zustand",
     imgSrc: "/resources/img/booksuno.webp",
     desc: "A webapp that let's you listen to audiobooks for free.",
