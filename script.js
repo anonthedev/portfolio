@@ -1,5 +1,6 @@
 const socialsEl = document.querySelector("#socials");
 const projectsEl = document.querySelector("#projects");
+const experienceEl = document.querySelector("#experience");
 
 const socialHandles = [
   {
@@ -87,6 +88,31 @@ socialHandles.forEach((social, index) => {
   socialsEl.appendChild(a);
 });
 
+const experienceArray = [
+  {
+    role: "Software Development Engineer Intern",
+    company: "Composio",
+    duration: "Apr 2024 - Aug 2024",
+    techStack: "TypeScript, Next.js, Python, Tailwind CSS",
+    responsibilities: [
+      "Integrated Cloudflare AI and Vercel AI SDK into Composio's JavaScript SDK, including comprehensive documentation.",
+      "Implemented a robust design system in Next.js with Storybook for improved component development and testing.",
+      "Developed multiple small projects and examples with Composio's Python and JavaScript SDK."
+    ]
+  },
+  {
+    role: "Frontend Developer",
+    company: "Soshals",
+    duration: "Mar 2023 - May 2023",
+    techStack: "Next.js, TypeScript, Tailwind CSS, Redux, Material UI",
+    responsibilities: [
+      "Engineered a Gumroad-inspired marketplace for buying, creating, and selling multimodal digital products",
+      "Collaborated within a 3-person tech team to design and implement an engaging landing page",
+      "Leveraged Material UI components to ensure a consistent and professional user interface"
+    ]
+  }
+];
+
 projectsArray.forEach((project, index) => {
   const div = document.createElement("div");
   div.className = "project-div";
@@ -133,4 +159,45 @@ projectsArray.forEach((project, index) => {
   div.append(imgDiv, detailsDiv);
 
   projectsEl.appendChild(div);
+});
+
+experienceArray.forEach((exp) => {
+  const timelineItem = document.createElement("div");
+  timelineItem.className = "timeline-item";
+
+  const content = document.createElement("div");
+  content.className = "timeline-content";
+
+  const role = document.createElement("h3");
+  role.textContent = exp.role;
+
+  const companyDuration = document.createElement("div");
+  companyDuration.className = "company-duration";
+
+  const company = document.createElement("span");
+  company.className = "company";
+  company.textContent = exp.company;
+
+  const duration = document.createElement("span");
+  duration.className = "duration";
+  duration.textContent = exp.duration;
+
+  companyDuration.append(company, duration);
+
+  const techStack = document.createElement("div");
+  techStack.className = "tech-stack";
+  techStack.textContent = `Tech Stack: ${exp.techStack}`;
+
+  const responsibilities = document.createElement("ul");
+  responsibilities.className = "responsibilities";
+
+  exp.responsibilities.forEach((resp) => {
+    const li = document.createElement("li");
+    li.textContent = resp;
+    responsibilities.appendChild(li);
+  });
+
+  content.append(role, companyDuration, techStack, responsibilities);
+  timelineItem.appendChild(content);
+  experienceEl.appendChild(timelineItem);
 });

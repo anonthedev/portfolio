@@ -170,3 +170,108 @@ nav {
     align-items: center;
   }
 }
+
+/* Experience Timeline Styles */
+.experience-section {
+  margin-top: 20px;
+}
+
+.timeline {
+  position: relative;
+  padding: 20px 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: #ffc42c;
+}
+
+.timeline-item {
+  padding-left: 30px;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -5px;
+  top: 0;
+  width: 12px;
+  height: 12px;
+  background: #ffc42c;
+  border-radius: 50%;
+}
+
+.timeline-content {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.timeline-content h3 {
+  margin-bottom: 10px;
+  color: #ffc42c;
+}
+
+.company-duration {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.company {
+  font-weight: 600;
+}
+
+.duration {
+  color: #a3a3a3;
+}
+
+.tech-stack {
+  font-size: 14px;
+  color: #a3a3a3;
+  margin-bottom: 15px;
+}
+
+.responsibilities {
+  list-style-position: inside;
+  font-size: 14px;
+  color: #e0e2dc;
+}
+
+.responsibilities li {
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.responsibilities li:last-child {
+  margin-bottom: 0;
+}
+
+@media only screen and (max-width: 576px) {
+  .company-duration {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  
+  .timeline-content {
+    padding: 15px;
+  }
+  
+  .responsibilities {
+    padding-left: 10px;
+  }
+}
