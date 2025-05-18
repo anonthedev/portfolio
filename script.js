@@ -36,6 +36,7 @@ const projectsArray = [
     techStack: "Next.js, Tailwind, TS, Zustand",
     imgSrc: "/resources/img/booksuno.webp",
     desc: "A webapp that let's you listen to audiobooks for free.",
+    githubLink: "https://github.com/anonthedev/booksuno",
     demoLink: "https://booksuno.xyz",
   },
   {
@@ -51,7 +52,7 @@ const projectsArray = [
     imgSrc: "/resources/img/3d-renderer.webp",
     desc: "A 3D renderer made in TS, it can render simple 3D objects in the HTML Canvas.",
     githubLink: "https://github.com/anonthedev/soft3Dengine",
-    // demoLink: "https://blog-thumbnail-generator.netlify.app",
+    demoLink: "https://soft3dengine.vercel.app",
   },
   {
     title: "focustunes (200+ users)",
@@ -61,22 +62,22 @@ const projectsArray = [
     githubLink: "https://github.com/anonthedev/soft3Dengine",
     demoLink: "https://focustunes.vercel.app",
   },
-  {
-    title: "Likify",
-    imgSrc: "/resources/img/likify.webp",
-    techStack: "Next.js, Tailwind, TS",
-    desc: "A website where you can convert your liked songs collection to a shareable spotify playlist.",
-    githubLink: "https://github.com/anonthedev/Likify",
-    demoLink: "https://likify.vercel.app/",
-  },
-  {
-    title: "Screen Recorder",
-    techStack: "HTML, CSS, JS",
-    imgSrc: "/resources/img/screen-recorder.webp",
-    desc: "A web based screen recorder that lets you record your screen and download it without having to create an account.",
-    githubLink: "https://github.com/anonthedev/screen-recorder",
-    demoLink: "https://anon-screen-recorder.netlify.app/",
-  },
+  // {
+  //   title: "Likify",
+  //   imgSrc: "/resources/img/likify.webp",
+  //   techStack: "Next.js, Tailwind, TS",
+  //   desc: "A website where you can convert your liked songs collection to a shareable spotify playlist.",
+  //   githubLink: "https://github.com/anonthedev/Likify",
+  //   demoLink: "https://likify.vercel.app/",
+  // },
+  // {
+  //   title: "Screen Recorder",
+  //   techStack: "HTML, CSS, JS",
+  //   imgSrc: "/resources/img/screen-recorder.webp",
+  //   desc: "A web based screen recorder that lets you record your screen and download it without having to create an account.",
+  //   githubLink: "https://github.com/anonthedev/screen-recorder",
+  //   demoLink: "https://anon-screen-recorder.netlify.app/",
+  // },
 ];
 
 socialHandles.forEach((social, index) => {

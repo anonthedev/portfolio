@@ -103,12 +103,27 @@ nav {
   flex-direction: column;
   max-width: 30ch;
   background-color: black;
-  border-radius: 8px 8px 8px 8px ;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 3/4;
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-div:hover {
+  transform: scale(1.02);
 }
 
 .project-img{
-  border-radius: 8px 8px 0px 0px;
+  position: absolute;
   width: 100%;
+  height: 50%;
+  object-fit: cover;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.project-div:hover .project-img {
+  opacity: 0.2;
 }
 
 .project-details{
@@ -116,8 +131,27 @@ nav {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  justify-content: space-between;
-  padding: 15px 10px;
+  justify-content: flex-end;
+  padding: 15px;
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 30%, rgba(0,0,0,0.6) 70%, rgba(0,0,0,0.4) 100%);
+}
+
+.project-details::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 0;
+  background: rgba(0,0,0,0.7);
+  transition: height 0.3s ease-out;
+  z-index: -1;
+}
+
+.project-div:hover .project-details::before {
+  height: 100%;
 }
 
 .project-tech-stack{
