@@ -24,6 +24,14 @@ const socialHandles = [
 
 const projectsArray = [
   {
+    title: "Readica",
+    techStack: "Next.js, Tailwind, TS, Supaabse, Vercel AI SDK",
+    imgSrc: "/resources/img/readica.png",
+    desc: "A webapp that helps you manage, read and take notes on research papers",
+    // githubLink: "https://github.com/anonthedev/readica",
+    demoLink: "https://readica.pro/",
+  },
+  {
     title: "Youify (50+ MAUs)",
     techStack: "Next.js, Tailwind, TS, ContextAPI",
     imgSrc: "/resources/img/youify.webp",
@@ -38,6 +46,14 @@ const projectsArray = [
     desc: "A webapp that let's you listen to audiobooks for free.",
     githubLink: "https://github.com/anonthedev/booksuno",
     demoLink: "https://booksuno.xyz",
+  },
+  {
+    title: "dustngold",
+    techStack: "Next.js, Tailwind, TS, Zustand, supabase, tanstack-query",
+    imgSrc: "/resources/img/dustngold.png",
+    desc: "A webapp that let's you find and share all forms of underrated art like movies, songs, books, games etc.",
+    githubLink: "https://github.com/anonthedev/dustngold",
+    demoLink: "https://dustngold.vercel.app",
   },
   {
     title: "Rush My Flight",
