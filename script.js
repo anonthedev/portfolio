@@ -70,14 +70,6 @@ const projectsArray = [
     githubLink: "https://github.com/anonthedev/soft3Dengine",
     demoLink: "https://soft3dengine.vercel.app",
   },
-  {
-    title: "focustunes (200+ users)",
-    techStack: "Next.js, Tailwind, TS, Zustand",
-    imgSrc: "/resources/img/focustunes.webp",
-    desc: "focustunes is a website where you can mix different sounds at different volumes to find the perfect sweet spot for yourself.",
-    githubLink: "https://github.com/anonthedev/soft3Dengine",
-    demoLink: "https://focustunes.vercel.app",
-  },
   // {
   //   title: "Likify",
   //   imgSrc: "/resources/img/likify.webp",
