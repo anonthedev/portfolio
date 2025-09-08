@@ -122,9 +122,8 @@ nav {
   transition: opacity 0.3s ease-in-out;
 }
 
-.project-div:hover .project-img {
-  opacity: 0.2;
-}
+/* Remove opacity change on project hover to keep image unchanged */
+/* .project-div:hover .project-img { opacity: 0.2; } */
 
 .project-details{
   height: 100%;
@@ -150,9 +149,8 @@ nav {
   z-index: -1;
 }
 
-.project-div:hover .project-details::before {
-  height: 100%;
-}
+/* Keep gradient overlay static; remove full overlay on hover */
+/* .project-div:hover .project-details::before { height: 100%; } */
 
 .project-tech-stack{
   font-size: 14px;

@@ -24,68 +24,37 @@ const socialHandles = [
 
 const projectsArray = [
   {
+    title: "Slayshot",
+    techStack: "Next.js, Tailwind, TypeScript, Supabase, Python, OpenAI, Modal, Inngest",
+    imgSrc: "/resources/img/slayshot.png",
+    desc: "An AI-powered SaaS for generating short-form videos from long podcasts, automating clip extraction, captioning, and vertical formatting.",
+    githubLink: "",
+    demoLink: "https://slayshot.xyz",
+  },
+  {
     title: "Readica",
-    techStack: "Next.js, Tailwind, TS, Supaabse, Vercel AI SDK",
+    techStack: "Next.js, Supabase, Node.js, PDF-lib, Tiptap",
     imgSrc: "/resources/img/readica.png",
-    desc: "A webapp that helps you manage, read and take notes on research papers",
-    // githubLink: "https://github.com/anonthedev/readica",
+    desc: "A research paper management platform for discovering, organizing, and annotating academic PDFs.",
+    githubLink: "",
     demoLink: "https://readica.pro/",
   },
   {
-    title: "Youify (50+ MAUs)",
-    techStack: "Next.js, Tailwind, TS, ContextAPI",
-    imgSrc: "/resources/img/youify.webp",
-    desc: "A website where you can convert your YouTube playlist to Spotify and vice versa.",
-    githubLink: "https://github.com/anonthedev/youify",
-    demoLink: "https://youify.xyz/",
-  },
-  {
-    title: "booksuno (700+ users)",
-    techStack: "Next.js, Tailwind, TS, Zustand",
+    title: "Booksuno (1000+ users)",
+    techStack: "Next.js, Tailwind, TypeScript, Zustand",
     imgSrc: "/resources/img/booksuno.webp",
-    desc: "A webapp that let's you listen to audiobooks for free.",
+    desc: "An audiobook platform leveraging LibriVox API for extensive content.",
     githubLink: "https://github.com/anonthedev/booksuno",
     demoLink: "https://booksuno.xyz",
   },
   {
-    title: "dustngold",
-    techStack: "Next.js, Tailwind, TS, Zustand, supabase, tanstack-query",
-    imgSrc: "/resources/img/dustngold.png",
-    desc: "A webapp that let's you find and share all forms of underrated art like movies, songs, books, games etc.",
-    githubLink: "https://github.com/anonthedev/dustngold",
-    demoLink: "https://dustngold.vercel.app",
+    title: "Youify (50+ MAUs)",
+    techStack: "Next.js, Tailwind, TypeScript, ContextAPI",
+    imgSrc: "/resources/img/youify.webp",
+    desc: "A service website for migrating playlists between YouTube and Spotify.",
+    githubLink: "https://github.com/anonthedev/youify",
+    demoLink: "https://youify.xyz/",
   },
-  {
-    title: "Rush My Flight",
-    techStack: "Next.js, Tailwind, TS, ContextAPI",
-    imgSrc: "/resources/img/rush-my-flight.webp",
-    desc: "A freelance project wesbite where you can book flights, I handled the frontend on this project.",
-    demoLink: "https://rushmyflight.com/",
-  },
-  {
-    title: "3D renderer",
-    techStack: "HTML, CSS, TS, BABYLON",
-    imgSrc: "/resources/img/3d-renderer.webp",
-    desc: "A 3D renderer made in TS, it can render simple 3D objects in the HTML Canvas.",
-    githubLink: "https://github.com/anonthedev/soft3Dengine",
-    demoLink: "https://soft3dengine.vercel.app",
-  },
-  // {
-  //   title: "Likify",
-  //   imgSrc: "/resources/img/likify.webp",
-  //   techStack: "Next.js, Tailwind, TS",
-  //   desc: "A website where you can convert your liked songs collection to a shareable spotify playlist.",
-  //   githubLink: "https://github.com/anonthedev/Likify",
-  //   demoLink: "https://likify.vercel.app/",
-  // },
-  // {
-  //   title: "Screen Recorder",
-  //   techStack: "HTML, CSS, JS",
-  //   imgSrc: "/resources/img/screen-recorder.webp",
-  //   desc: "A web based screen recorder that lets you record your screen and download it without having to create an account.",
-  //   githubLink: "https://github.com/anonthedev/screen-recorder",
-  //   demoLink: "https://anon-screen-recorder.netlify.app/",
-  // },
 ];
 
 socialHandles.forEach((social, index) => {
@@ -99,6 +68,28 @@ socialHandles.forEach((social, index) => {
 
 const experienceArray = [
   {
+    role: "Contractor",
+    company: "Unusals",
+    duration: "Jul 2025",
+    techStack: "NestJS, React (Electron), OpenAI Agents SDK",
+    responsibilities: [
+      "Built end-to-end AI-driven video generation workflows in NestJS, achieving ~50% performance improvements through optimized pipeline design and caching strategies.",
+      "Developed a flow editor in React (Electron), enabling interactive workflow creation with real-time updates and TypeScript-based extensibility.",
+      "Integrated OpenAI Agents SDK to orchestrate modular AI agents, streamlining video generation and automation tasks."
+    ]
+  },
+  {
+    role: "Frontend Intern",
+    company: "1811 Labs",
+    duration: "May 2025 – Jun 2025",
+    techStack: "Next.js, TypeScript, Tailwind CSS, Supabase, Tanstack Query, Plasmo",
+    responsibilities: [
+      "Developed a full-featured YouTube transcription browser extension with seamless authentication via the main platform and a pixel-perfect, responsive UI using Plasmo.",
+      "Implemented optimized frontend flows for image generation, leveraging Tanstack Query for caching and Supabase Realtime for dynamic cache invalidation.",
+      "Built efficient frontend workflows for video generation, integrating real-time updates and performance-focused data fetching strategies."
+    ]
+  },
+  {
     role: "Software Development Engineer Intern",
     company: "Composio",
     duration: "Apr 2024 - Aug 2024",
@@ -107,17 +98,6 @@ const experienceArray = [
       "Integrated Cloudflare AI and Vercel AI SDK into Composio's JavaScript SDK, including comprehensive documentation.",
       "Implemented a robust design system in Next.js with Storybook for improved component development and testing.",
       "Developed multiple small projects and examples with Composio's Python and JavaScript SDK."
-    ]
-  },
-  {
-    role: "Frontend Developer",
-    company: "Soshals",
-    duration: "Mar 2023 - May 2023",
-    techStack: "Next.js, TypeScript, Tailwind CSS, Redux, Material UI",
-    responsibilities: [
-      "Engineered a Gumroad-inspired marketplace for buying, creating, and selling multimodal digital products",
-      "Collaborated within a 3-person tech team to design and implement an engaging landing page",
-      "Leveraged Material UI components to ensure a consistent and professional user interface"
     ]
   }
 ];
