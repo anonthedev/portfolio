@@ -1,0 +1,35 @@
+# Pranav Kumar
+
+> Pranav Kumar is an applied AI and GenAI engineer in India. He specializes in retrieval pipelines, AI agents, and the infrastructure required to run LLMs reliably in production. He is open to new work.
+
+Pranav Kumar (anonthedev) engineers applied AI systems. The core of his work involves building background processing queues, evaluating model performance, and designing robust architectures for GenAI applications. Email anonthedev.js@gmail.com. Resume: https://drive.google.com/file/d/19a5pm2cy9TrVS72FmJt1GjBqxsj1Bj41/view?usp=sharing
+
+## Selected work
+
+- [Athel](https://github.com/anonthedev/athel): Local deep research agent. You edit the drafted questions. It searches the web, reads pages and PDFs, and saves the report on disk. PDF text is ranked by embedding and the extractor sees the top 12 passages. On a labeled set, the target fact held on 24 of 25 papers. Python, LangGraph, FastAPI, Electron. 2026.
+- [OpenRabbit](https://github.com/anonthedev/openrabbit): Self-hosted GitHub App that reviews pull requests. It reads the diff, finds related code in the base commit, and posts a comment on bugs, security issues, and duplicated logic. A small safe fix is posted as a GitHub suggestion. A clean diff gets a short note. Tree-sitter symbols from the base commit are embedded in sqlite-vec, and the review pulls the nearest 5. TypeScript, OpenRouter. 2026.
+- [Slayshot](https://slayshot.xyz): Turned a long video or a YouTube link into a vertical clip with word-timed captions. Transcription found the words, moment scoring picked sections that can stand alone, and active-speaker detection reframed the shot. The hosted product is shut down. Source: [omenclip](https://github.com/anonthedev/omenclip). Next.js, Supabase, Python, Modal, Inngest.
+- [Readica](https://readica.pro/): Library for research PDFs. Upload a paper or save one from search, tag it, and mark whether you have read it. Search and highlights live in the reader, and notes stay on that paper. You can ask for papers on a topic and add the ones you want. Source: [github.com/anonthedev/readica](https://github.com/anonthedev/readica). Next.js, Supabase, Node.js, PDF-lib, Tiptap. 2024–present.
+
+## Experience
+
+- Unusals, Software Engineering Intern, Jul 2025–Aug 2025. Built video-generation pipelines in NestJS. A structured cache on the job path cut processing latency by 50%. Ran OpenAI SDK calls as stages in the same render job. Built a React and Electron node editor that wrote graph edits into the running job.
+- 1811 Labs, Frontend Intern, May 2025–Jun 2025. Built a Plasmo extension for a YouTube transcription product and reused the web app's auth session. Wired media-generation screens to TanStack Query, with live updates from Supabase Realtime.
+- Composio, Software Development Engineer Intern, Apr 2024–Aug 2024. Added Cloudflare AI and the Vercel AI SDK as providers in the core JavaScript SDK, behind one client for model calls. Built the internal Next.js component library in Storybook.
+
+## Toolkit
+
+- Languages: Python, TypeScript, JavaScript
+- GenAI: LangGraph, OpenAI SDK, Vercel AI SDK, embeddings
+- Frameworks: FastAPI, Next.js, React, Electron, NestJS
+- Data and infra: PostgreSQL, Supabase, sqlite-vec, Modal, Inngest
+
+## Contact
+
+- Site: https://anonthedev.xyz/
+- Email: anonthedev.js@gmail.com
+- GitHub: https://github.com/anonthedev
+- Twitter: https://twitter.com/anonthedev
+- Peerlist: https://peerlist.io/anonthedev
+- Medium: https://anontheblogger.medium.com/
+- Resume: https://drive.google.com/file/d/19a5pm2cy9TrVS72FmJt1GjBqxsj1Bj41/view?usp=sharing

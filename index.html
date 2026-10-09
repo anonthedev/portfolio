@@ -4,29 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Pranav Kumar — Applied AI Engineer</title>
+    <title>Pranav Kumar | Applied AI and GenAI Engineer</title>
     <meta
       name="description"
-      content="Pranav Kumar is an applied AI engineer building research agents, retrieval pipelines, and the full-stack glue around them. Work, experience, and ways to get in touch."
+      content="Pranav Kumar is an applied AI and GenAI engineer. He builds retrieval pipelines, background processing queues, and the infrastructure to run LLMs reliably."
     />
     <meta name="author" content="Pranav Kumar" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
     <meta name="theme-color" content="#121212" />
     <link rel="canonical" href="https://anonthedev.xyz/" />
+    <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-readable summary" />
 
     <!-- Open Graph / Twitter -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Pranav Kumar — Applied AI Engineer" />
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content="Pranav Kumar | Applied AI and GenAI Engineer" />
     <meta
       property="og:description"
-      content="Applied AI engineer building research agents, retrieval pipelines, and the full-stack glue around them."
+      content="Applied AI and GenAI engineer. Retrieval pipelines, background processing queues, and the infrastructure to run LLMs reliably."
     />
     <meta property="og:url" content="https://anonthedev.xyz/" />
+    <meta property="og:locale" content="en_IN" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:creator" content="@anonthedev" />
-    <meta name="twitter:title" content="Pranav Kumar — Applied AI Engineer" />
+    <meta name="twitter:title" content="Pranav Kumar | Applied AI and GenAI Engineer" />
     <meta
       name="twitter:description"
-      content="Applied AI engineer building research agents, retrieval pipelines, and the full-stack glue around them."
+      content="Applied AI and GenAI engineer. Retrieval pipelines, background processing queues, and the infrastructure to run LLMs reliably."
     />
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -45,33 +48,107 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Pranav Kumar",
-        "jobTitle": "Applied AI Engineer",
-        "email": "mailto:anonthedev.js@gmail.com",
-        "url": "https://anonthedev.xyz/",
-        "alumniOf": {
-          "@type": "CollegeOrUniversity",
-          "name": "Bennett University"
-        },
-        "knowsAbout": [
-          "AI agents",
-          "Retrieval",
-          "Embeddings",
-          "LangGraph",
-          "Full-stack engineering"
-        ],
-        "sameAs": [
-          "https://twitter.com/anonthedev",
-          "https://github.com/anonthedev",
-          "https://peerlist.io/anonthedev",
-          "https://anontheblogger.medium.com/"
+        "@graph": [
+          {
+            "@type": "ProfilePage",
+            "@id": "https://anonthedev.xyz/#page",
+            "url": "https://anonthedev.xyz/",
+            "name": "Pranav Kumar | Applied AI and GenAI Engineer",
+            "description": "Applied AI and GenAI engineer specializing in retrieval pipelines, background processing queues, and production-grade LLM infrastructure.",
+            "dateModified": "2026-10-09",
+            "inLanguage": "en",
+            "mainEntity": { "@id": "https://anonthedev.xyz/#pranav" }
+          },
+          {
+            "@type": "Person",
+            "@id": "https://anonthedev.xyz/#pranav",
+            "name": "Pranav Kumar",
+            "alternateName": "anonthedev",
+            "jobTitle": "Applied AI Engineer",
+            "description": "Applied AI and GenAI engineer. Builds retrieval pipelines, background processing queues, and the infrastructure to run LLMs reliably. Open to new work.",
+            "email": "mailto:anonthedev.js@gmail.com",
+            "url": "https://anonthedev.xyz/",
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "IN"
+            },
+            "knowsAbout": [
+              "Applied AI",
+              "Generative AI",
+              "Retrieval",
+              "Embeddings",
+              "Infrastructure",
+              "Background processing"
+            ],
+            "sameAs": [
+              "https://twitter.com/anonthedev",
+              "https://github.com/anonthedev",
+              "https://peerlist.io/anonthedev",
+              "https://anontheblogger.medium.com/"
+            ]
+          },
+          {
+            "@type": "ItemList",
+            "name": "Selected work by Pranav Kumar",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                  "@type": "SoftwareSourceCode",
+                  "name": "Athel",
+                  "description": "Local deep research agent. PDF passages are ranked by embedding, and the extractor sees the top 12. On a labeled set, the target fact held on 24 of 25 papers.",
+                  "programmingLanguage": "Python",
+                  "codeRepository": "https://github.com/anonthedev/athel",
+                  "author": { "@id": "https://anonthedev.xyz/#pranav" }
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                  "@type": "SoftwareSourceCode",
+                  "name": "OpenRabbit",
+                  "description": "Self-hosted GitHub App that reviews pull requests. It embeds tree-sitter symbols from the base commit in sqlite-vec and comments on bugs, security issues, and duplicated logic.",
+                  "programmingLanguage": "TypeScript",
+                  "codeRepository": "https://github.com/anonthedev/openrabbit",
+                  "author": { "@id": "https://anonthedev.xyz/#pranav" }
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "item": {
+                  "@type": "SoftwareSourceCode",
+                  "name": "Slayshot",
+                  "description": "Pipeline that turned a long video or YouTube link into vertical clips with word-timed captions, using transcription, moment scoring, and active-speaker reframing. The hosted product is shut down.",
+                  "programmingLanguage": "Python",
+                  "codeRepository": "https://github.com/anonthedev/omenclip",
+                  "url": "https://slayshot.xyz",
+                  "author": { "@id": "https://anonthedev.xyz/#pranav" }
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "item": {
+                  "@type": "SoftwareSourceCode",
+                  "name": "Readica",
+                  "description": "Library for research PDFs. Upload or save a paper, tag it, track reading status, and keep notes on the paper. Search can add new papers to the library.",
+                  "programmingLanguage": "TypeScript",
+                  "codeRepository": "https://github.com/anonthedev/readica",
+                  "url": "https://readica.pro/",
+                  "author": { "@id": "https://anonthedev.xyz/#pranav" }
+                }
+              }
+            ]
+          }
         ]
       }
     </script>
   </head>
   <body>
-    <a class="skip-link" href="#work">Skip to content</a>
+    <a class="skip-link" href="#top">Skip to content</a>
 
     <header class="site-header">
       <nav class="nav" aria-label="Primary">
@@ -97,16 +174,15 @@
     <main id="top" class="main-content">
       <!-- Identity -->
       <section class="hero" aria-labelledby="hero-heading">
-        <p class="eyebrow">pranav kumar · applied ai engineer</p>
+        <p class="eyebrow">pranav kumar · applied ai / genai</p>
         <h1 id="hero-heading">
-          hey, i'm pranav. i build the plumbing behind
-          <span class="keywords">ai products</span>.
+          hey, i'm pranav. i engineer
+          <span class="keywords">applied ai</span> systems.
         </h1>
         <p class="lede">
-          mostly <span class="keywords">research agents</span>,
-          <span class="keywords">retrieval pipelines</span>, and the full-stack
-          glue around them. i care more about how a system behaves under load
-          than how it looks in a demo.
+          retrieval pipelines, background processing queues, and the
+          infrastructure to run llms reliably. i care more about how a system
+          behaves under load than how it looks in a demo.
         </p>
 
         <dl class="status">
@@ -116,11 +192,11 @@
           </div>
           <div class="status-row">
             <dt>into</dt>
-            <dd>ai agents, embeddings, retrieval, evals.</dd>
+            <dd>infrastructure, retrieval, evals, embeddings.</dd>
           </div>
           <div class="status-row">
             <dt>worked on</dt>
-            <dd>ai + backend at unusals, sdks at composio.</dd>
+            <dd>ai infrastructure at unusals, sdks at composio.</dd>
           </div>
           <div class="status-row">
             <dt>status</dt>
@@ -133,16 +209,16 @@
             <a target="_blank" rel="noopener noreferrer" href="mailto:anonthedev.js@gmail.com">email</a>
           </li>
           <li>
-            <a target="_blank" rel="noopener noreferrer" href="https://github.com/anonthedev">github</a>
+            <a target="_blank" rel="me noopener noreferrer" href="https://github.com/anonthedev">github</a>
           </li>
           <li>
-            <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/anonthedev">twitter</a>
+            <a target="_blank" rel="me noopener noreferrer" href="https://twitter.com/anonthedev">twitter</a>
           </li>
           <li>
-            <a target="_blank" rel="noopener noreferrer" href="https://peerlist.io/anonthedev">peerlist</a>
+            <a target="_blank" rel="me noopener noreferrer" href="https://peerlist.io/anonthedev">peerlist</a>
           </li>
           <li>
-            <a target="_blank" rel="noopener noreferrer" href="https://anontheblogger.medium.com/">medium</a>
+            <a target="_blank" rel="me noopener noreferrer" href="https://anontheblogger.medium.com/">medium</a>
           </li>
         </ul>
       </section>
@@ -150,9 +226,7 @@
       <!-- 01 Work -->
       <section id="work" class="section" aria-labelledby="work-heading">
         <p class="section-label">01 · work</p>
-        <h2 id="work-heading" class="section-title">
-          things i've built, and why they were interesting.
-        </h2>
+        <h2 id="work-heading" class="section-title">what i've built.</h2>
 
         <ol class="projects">
           <li class="project">
@@ -162,12 +236,11 @@
             </div>
             <p class="project-stack">Python · LangGraph · FastAPI · Electron</p>
             <p class="project-desc">
-              a desktop app that turns one question into a sourced markdown
-              report. you ask a topic in the window, edit the questions it
-              drafts, and it searches the web, reads the html and pdfs it
-              finds, then writes the report to disk. pdf pages are split into
-              passages and ranked by embedding, so the extractor only sees the
-              top 12. on a labeled set, the target fact held on 24 of 25 papers.
+              a deep research agent that runs locally. you edit the questions it
+              drafts. it searches the web, reads the pages and pdfs, and saves
+              the report on disk. pdf text is ranked by embedding, and the
+              extractor only sees the top 12 passages. on a labeled set, the
+              target fact held on 24 of 25 papers.
             </p>
             <p class="links">
               <a
@@ -189,14 +262,12 @@
             </p>
             <p class="project-desc">
               a self-hosted github app that reviews pull requests. when a pr
-              opens or updates, it reads the diff, looks up related code in the
-              base commit, and posts a comment. it flags bugs, security issues,
-              duplicated logic, work outside the pr's goal, load problems, and
-              breaks with a pattern already in the repo. a small safe fix is
-              posted as a github suggestion. if none of that applies, it leaves
-              a short note and stops. the lookup splits the base commit into
-              tree-sitter symbols, embeds them in sqlite-vec, and pulls the
-              nearest 5 before the model writes.
+              opens or updates, it reads the diff, finds related code in the
+              base commit, and posts a comment. it calls out bugs, security
+              issues, and duplicated logic. a small safe fix is posted as a
+              github suggestion. a clean diff gets a short note. the lookup
+              embeds tree-sitter symbols from the base commit in sqlite-vec and
+              pulls the nearest 5 before it writes.
             </p>
             <p class="links">
               <a
@@ -217,12 +288,11 @@
               Next.js · Supabase · Python · Modal · Inngest
             </p>
             <p class="project-desc">
-              turned a long video, or a youtube link, into vertical clips you
-              could post. it transcribed the source, scored moments that could
-              stand on their own, cut those sections, reframed them by tracking
-              the active speaker, and burned in word-timed captions. the hosted
-              product is shut down. the pipeline is open source under its old
-              repo name, omenclip.
+              turned a long video or a youtube link into a vertical clip with
+              word-timed captions. transcription found the words. moment scoring
+              picked sections that can stand alone. active-speaker detection
+              reframed the shot. the hosted product is shut down. the
+              open-source pipeline is in the omenclip repo.
             </p>
             <p class="links">
               <a
@@ -247,11 +317,10 @@
             </div>
             <p class="project-stack">Next.js · Supabase · Node.js · PDF-lib · Tiptap</p>
             <p class="project-desc">
-              a reading system for research pdfs. upload a paper or save one
-              from search, tag it, and mark whether you've read it. the reader
-              opens the pdf with search and highlights, and notes stay attached
-              to that paper. you can also ask it to find papers on a topic,
-              review the candidates, and add the useful ones to the library.
+              a library for research pdfs. you upload a paper or save one from
+              search, tag it, and mark whether you have read it. search and
+              highlights live in the reader. notes stay on that paper. you can
+              ask for papers on a topic and add the ones you want.
             </p>
             <p class="links">
               <a
@@ -275,7 +344,7 @@
       <section id="experience" class="section" aria-labelledby="exp-heading">
         <p class="section-label">02 · experience</p>
         <h2 id="exp-heading" class="section-title">
-          where i've worked, mostly on genai and fullstack.
+          internships building the infrastructure for ai.
         </h2>
 
         <ol class="timeline">
@@ -293,8 +362,8 @@
                   on the job path cut processing latency by 50%.
                 </li>
                 <li>
-                  dispatched openai sdk calls as stages inside the render job,
-                  alongside the rest of the video processing.
+                  ran openai sdk calls as stages in the same render job as the
+                  rest of the video processing.
                 </li>
                 <li>
                   built a react + electron node editor that mapped each pipeline
@@ -320,8 +389,8 @@
                   and reused the web app's auth session inside it.
                 </li>
                 <li>
-                  built frontend flows on the media-generation endpoints with
-                  tanstack query and live updates over supabase realtime.
+                  wired the media-generation screens to tanstack query, with live
+                  updates from supabase realtime.
                 </li>
               </ul>
             </div>
@@ -350,11 +419,11 @@
         </ol>
       </section>
 
-      <!-- 03 Toolkit + Education -->
+      <!-- 03 Toolkit -->
       <section id="toolkit" class="section" aria-labelledby="toolkit-heading">
         <p class="section-label">03 · toolkit</p>
         <h2 id="toolkit-heading" class="section-title">
-          what i reach for, and where i'm studying.
+          what i reach for when building.
         </h2>
 
         <dl class="toolkit">
@@ -374,13 +443,6 @@
             <dt>data / infra</dt>
             <dd>PostgreSQL · Supabase · sqlite-vec · Modal · Inngest</dd>
           </div>
-          <div class="toolkit-row">
-            <dt>studying</dt>
-            <dd>
-              B.Tech, Computer Science · Bennett University · 2024–2028 · CGPA
-              8.32
-            </dd>
-          </div>
         </dl>
       </section>
 
@@ -391,33 +453,37 @@
           send me the interesting problem.
         </h2>
         <p class="lede">
-          ai, backend, retrieval, anything slightly broken. the quickest way to
-          reach me is email or twitter.
+          genai and applied ai roles. twitter dm is the fastest reply. the resume is
+          the one-page version of this site.
         </p>
         <p class="contact-line">
-          <a target="_blank" rel="noopener noreferrer" href="mailto:anonthedev.js@gmail.com"
-            >anonthedev.js@gmail.com</a
+          <a href="mailto:anonthedev.js@gmail.com">anonthedev.js@gmail.com</a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://drive.google.com/file/d/19a5pm2cy9TrVS72FmJt1GjBqxsj1Bj41/view?usp=sharing"
+            >resume</a
           >
         </p>
         <ul class="socials" aria-label="Elsewhere">
           <li>
-            <a target="_blank" rel="noopener noreferrer" href="https://github.com/anonthedev">github</a>
+            <a target="_blank" rel="me noopener noreferrer" href="https://github.com/anonthedev">github</a>
           </li>
           <li>
-            <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/anonthedev">twitter</a>
+            <a target="_blank" rel="me noopener noreferrer" href="https://twitter.com/anonthedev">twitter</a>
           </li>
           <li>
-            <a target="_blank" rel="noopener noreferrer" href="https://peerlist.io/anonthedev">peerlist</a>
+            <a target="_blank" rel="me noopener noreferrer" href="https://peerlist.io/anonthedev">peerlist</a>
           </li>
           <li>
-            <a target="_blank" rel="noopener noreferrer" href="https://anontheblogger.medium.com/">medium</a>
+            <a target="_blank" rel="me noopener noreferrer" href="https://anontheblogger.medium.com/">medium</a>
           </li>
         </ul>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>© 2026 pranav kumar · built in india</p>
+      <p>© 2026 pranav kumar · built in india · updated october 2026</p>
     </footer>
   </body>
 </html>
