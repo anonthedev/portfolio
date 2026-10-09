@@ -3,69 +3,421 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Pranav Kumar — Applied AI Engineer</title>
+    <meta
+      name="description"
+      content="Pranav Kumar is an applied AI engineer building research agents, retrieval pipelines, and the full-stack glue around them. Work, experience, and ways to get in touch."
+    />
+    <meta name="author" content="Pranav Kumar" />
+    <meta name="theme-color" content="#121212" />
+    <link rel="canonical" href="https://anonthedev.xyz/" />
+
+    <!-- Open Graph / Twitter -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Pranav Kumar — Applied AI Engineer" />
+    <meta
+      property="og:description"
+      content="Applied AI engineer building research agents, retrieval pipelines, and the full-stack glue around them."
+    />
+    <meta property="og:url" content="https://anonthedev.xyz/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:creator" content="@anonthedev" />
+    <meta name="twitter:title" content="Pranav Kumar — Applied AI Engineer" />
+    <meta
+      name="twitter:description"
+      content="Applied AI engineer building research agents, retrieval pipelines, and the full-stack glue around them."
+    />
+
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
-    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
-    <title>Anon 2.0</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Pranav Kumar",
+        "jobTitle": "Applied AI Engineer",
+        "email": "mailto:anonthedev.js@gmail.com",
+        "url": "https://anonthedev.xyz/",
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "Bennett University"
+        },
+        "knowsAbout": [
+          "AI agents",
+          "Retrieval",
+          "Embeddings",
+          "LangGraph",
+          "Full-stack engineering"
+        ],
+        "sameAs": [
+          "https://twitter.com/anonthedev",
+          "https://github.com/anonthedev",
+          "https://peerlist.io/anonthedev",
+          "https://anontheblogger.medium.com/"
+        ]
+      }
+    </script>
   </head>
   <body>
-    <main class="main-content">
-      <nav>
+    <a class="skip-link" href="#work">Skip to content</a>
+
+    <header class="site-header">
+      <nav class="nav" aria-label="Primary">
+        <a class="nav-brand" href="#top">pranav</a>
         <ul class="nav-items">
-          <li class="nav-item">
+          <li><a href="#work">work</a></li>
+          <li><a href="#experience">experience</a></li>
+          <li><a href="#toolkit">toolkit</a></li>
+          <li><a href="#hello">hello</a></li>
+          <li>
             <a
+              class="nav-resume"
               target="_blank"
+              rel="noopener noreferrer"
               href="https://drive.google.com/file/d/19a5pm2cy9TrVS72FmJt1GjBqxsj1Bj41/view?usp=sharing"
-              >Resume</a
+              >resume</a
             >
           </li>
         </ul>
       </nav>
-      <section class="hero-section">
-        <div class="circuit-div">
-          <img
-            class="circuit-img"
-            src="./resources/img/circuit.png"
-            alt="circuit"
-          />
-        </div>
-        <h1 style="margin-top: 20px">yooo, this is Anon 2.0</h1>
-        <p>
-          I usually build <span class="keywords">frontend</span> of websites.
-          Other times I like to dive into low level stuff like
-          <span class="keywords">Graphics Programming</span>,
-          <span class="keywords">Computer Architecture</span> etc. also
-          sometimes I make 3D art.
+    </header>
+
+    <main id="top" class="main-content">
+      <!-- Identity -->
+      <section class="hero" aria-labelledby="hero-heading">
+        <p class="eyebrow">pranav kumar · applied ai engineer</p>
+        <h1 id="hero-heading">
+          hey, i'm pranav. i build the plumbing behind
+          <span class="keywords">ai products</span>.
+        </h1>
+        <p class="lede">
+          mostly <span class="keywords">research agents</span>,
+          <span class="keywords">retrieval pipelines</span>, and the full-stack
+          glue around them. i care more about how a system behaves under load
+          than how it looks in a demo.
         </p>
-        <p>
-          I usually keep posting my work on
-          <a target="_blank" href="https://twitter.com/anonthedev">twitter</a>.
-        </p>
-        <p>
-          Wanna get in touch? Reach out to me on
-          <a target="_blank" href="https://twitter.com/anonthedev">twitter</a>
-          or
-          <a target="_blank" href="mailto:anonthedev.js@gmail.com">email</a> me
-        </p>
-        <div id="socials" class="socials"></div>
+
+        <dl class="status">
+          <div class="status-row">
+            <dt>building</dt>
+            <dd>athel, a deep-research agent. openrabbit, a pr reviewer.</dd>
+          </div>
+          <div class="status-row">
+            <dt>into</dt>
+            <dd>ai agents, embeddings, retrieval, evals.</dd>
+          </div>
+          <div class="status-row">
+            <dt>worked on</dt>
+            <dd>ai + backend at unusals, sdks at composio.</dd>
+          </div>
+          <div class="status-row">
+            <dt>status</dt>
+            <dd>open to new work.</dd>
+          </div>
+        </dl>
+
+        <ul class="socials" aria-label="Social links">
+          <li>
+            <a target="_blank" rel="noopener noreferrer" href="mailto:anonthedev.js@gmail.com">email</a>
+          </li>
+          <li>
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/anonthedev">github</a>
+          </li>
+          <li>
+            <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/anonthedev">twitter</a>
+          </li>
+          <li>
+            <a target="_blank" rel="noopener noreferrer" href="https://peerlist.io/anonthedev">peerlist</a>
+          </li>
+          <li>
+            <a target="_blank" rel="noopener noreferrer" href="https://anontheblogger.medium.com/">medium</a>
+          </li>
+        </ul>
       </section>
-      <hr />
-      <section class="projects-section">
-        <h2>my projects</h2>
-        <div id="projects" class="projects"></div>
+
+      <!-- 01 Work -->
+      <section id="work" class="section" aria-labelledby="work-heading">
+        <p class="section-label">01 · work</p>
+        <h2 id="work-heading" class="section-title">
+          things i've built, and why they were interesting.
+        </h2>
+
+        <ol class="projects">
+          <li class="project">
+            <div class="project-head">
+              <h3 class="project-title">athel</h3>
+              <span class="project-meta">research agent · 2026</span>
+            </div>
+            <p class="project-stack">Python · LangGraph · FastAPI · Electron</p>
+            <p class="project-desc">
+              a desktop app that turns one question into a sourced markdown
+              report. you ask a topic in the window, edit the questions it
+              drafts, and it searches the web, reads the html and pdfs it
+              finds, then writes the report to disk. pdf pages are split into
+              passages and ranked by embedding, so the extractor only sees the
+              top 12. on a labeled set, the target fact held on 24 of 25 papers.
+            </p>
+            <p class="links">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://github.com/anonthedev/athel"
+                >github</a
+              >
+            </p>
+          </li>
+
+          <li class="project">
+            <div class="project-head">
+              <h3 class="project-title">openrabbit</h3>
+              <span class="project-meta">code review · 2026</span>
+            </div>
+            <p class="project-stack">
+              TypeScript · tree-sitter · sqlite-vec · OpenRouter
+            </p>
+            <p class="project-desc">
+              a self-hosted github app that reviews pull requests. when a pr
+              opens or updates, it reads the diff, looks up related code in the
+              base commit, and posts a comment. it flags bugs, security issues,
+              duplicated logic, work outside the pr's goal, load problems, and
+              breaks with a pattern already in the repo. a small safe fix is
+              posted as a github suggestion. if none of that applies, it leaves
+              a short note and stops. the lookup splits the base commit into
+              tree-sitter symbols, embeds them in sqlite-vec, and pulls the
+              nearest 5 before the model writes.
+            </p>
+            <p class="links">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://github.com/anonthedev/openrabbit"
+                >github</a
+              >
+            </p>
+          </li>
+
+          <li class="project">
+            <div class="project-head">
+              <h3 class="project-title">slayshot</h3>
+              <span class="project-meta">video pipeline · shut down</span>
+            </div>
+            <p class="project-stack">
+              Next.js · Supabase · Python · Modal · Inngest
+            </p>
+            <p class="project-desc">
+              turned a long video, or a youtube link, into vertical clips you
+              could post. it transcribed the source, scored moments that could
+              stand on their own, cut those sections, reframed them by tracking
+              the active speaker, and burned in word-timed captions. the hosted
+              product is shut down. the pipeline is open source under its old
+              repo name, omenclip.
+            </p>
+            <p class="links">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://github.com/anonthedev/omenclip"
+                >github</a
+              >
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://slayshot.xyz"
+                >slayshot.xyz</a
+              >
+            </p>
+          </li>
+
+          <li class="project">
+            <div class="project-head">
+              <h3 class="project-title">readica</h3>
+              <span class="project-meta">research tool · 2024–present</span>
+            </div>
+            <p class="project-stack">Next.js · Supabase · Node.js · PDF-lib · Tiptap</p>
+            <p class="project-desc">
+              a reading system for research pdfs. upload a paper or save one
+              from search, tag it, and mark whether you've read it. the reader
+              opens the pdf with search and highlights, and notes stay attached
+              to that paper. you can also ask it to find papers on a topic,
+              review the candidates, and add the useful ones to the library.
+            </p>
+            <p class="links">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://github.com/anonthedev/readica"
+                >github</a
+              >
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://readica.pro/"
+                >readica.pro</a
+              >
+            </p>
+          </li>
+        </ol>
       </section>
-      <hr />
-      <section class="experience-section">
-        <h2>work experience</h2>
-        <div id="experience" class="timeline"></div>
+
+      <!-- 02 Experience -->
+      <section id="experience" class="section" aria-labelledby="exp-heading">
+        <p class="section-label">02 · experience</p>
+        <h2 id="exp-heading" class="section-title">
+          where i've worked, mostly on genai and fullstack.
+        </h2>
+
+        <ol class="timeline">
+          <li class="timeline-item">
+            <div class="timeline-content">
+              <h3>Software Engineering Intern</h3>
+              <p class="company-duration">
+                <span class="company">Unusals</span>
+                <span class="duration">Jul 2025 – Aug 2025</span>
+              </p>
+              <p class="tech-stack">NestJS · React · Electron · OpenAI SDK</p>
+              <ul class="responsibilities">
+                <li>
+                  built video-generation pipelines in nestjs; a structured cache
+                  on the job path cut processing latency by 50%.
+                </li>
+                <li>
+                  dispatched openai sdk calls as stages inside the render job,
+                  alongside the rest of the video processing.
+                </li>
+                <li>
+                  built a react + electron node editor that mapped each pipeline
+                  stage to a node and wrote graph edits into the running job.
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="timeline-item">
+            <div class="timeline-content">
+              <h3>Frontend Intern</h3>
+              <p class="company-duration">
+                <span class="company">1811 Labs</span>
+                <span class="duration">May 2025 – Jun 2025</span>
+              </p>
+              <p class="tech-stack">
+                Next.js · TypeScript · TanStack Query · Supabase · Plasmo
+              </p>
+              <ul class="responsibilities">
+                <li>
+                  built a plasmo extension for a youtube transcription product
+                  and reused the web app's auth session inside it.
+                </li>
+                <li>
+                  built frontend flows on the media-generation endpoints with
+                  tanstack query and live updates over supabase realtime.
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="timeline-item">
+            <div class="timeline-content">
+              <h3>Software Development Engineer Intern</h3>
+              <p class="company-duration">
+                <span class="company">Composio</span>
+                <span class="duration">Apr 2024 – Aug 2024</span>
+              </p>
+              <p class="tech-stack">TypeScript · Next.js · Storybook · Python</p>
+              <ul class="responsibilities">
+                <li>
+                  added cloudflare ai and the vercel ai sdk as providers in the
+                  core javascript sdk, behind one client for model calls.
+                </li>
+                <li>
+                  built the internal next.js component library in storybook, with
+                  shared components used across the product ui.
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <!-- 03 Toolkit + Education -->
+      <section id="toolkit" class="section" aria-labelledby="toolkit-heading">
+        <p class="section-label">03 · toolkit</p>
+        <h2 id="toolkit-heading" class="section-title">
+          what i reach for, and where i'm studying.
+        </h2>
+
+        <dl class="toolkit">
+          <div class="toolkit-row">
+            <dt>languages</dt>
+            <dd>Python · TypeScript · JavaScript</dd>
+          </div>
+          <div class="toolkit-row">
+            <dt>genai</dt>
+            <dd>LangGraph · OpenAI SDK · Vercel AI SDK · embeddings</dd>
+          </div>
+          <div class="toolkit-row">
+            <dt>frameworks</dt>
+            <dd>FastAPI · Next.js · React · Electron · NestJS</dd>
+          </div>
+          <div class="toolkit-row">
+            <dt>data / infra</dt>
+            <dd>PostgreSQL · Supabase · sqlite-vec · Modal · Inngest</dd>
+          </div>
+          <div class="toolkit-row">
+            <dt>studying</dt>
+            <dd>
+              B.Tech, Computer Science · Bennett University · 2024–2028 · CGPA
+              8.32
+            </dd>
+          </div>
+        </dl>
+      </section>
+
+      <!-- 04 Hello -->
+      <section id="hello" class="section" aria-labelledby="hello-heading">
+        <p class="section-label">04 · hello</p>
+        <h2 id="hello-heading" class="section-title">
+          send me the interesting problem.
+        </h2>
+        <p class="lede">
+          ai, backend, retrieval, anything slightly broken. the quickest way to
+          reach me is email or twitter.
+        </p>
+        <p class="contact-line">
+          <a target="_blank" rel="noopener noreferrer" href="mailto:anonthedev.js@gmail.com"
+            >anonthedev.js@gmail.com</a
+          >
+        </p>
+        <ul class="socials" aria-label="Elsewhere">
+          <li>
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/anonthedev">github</a>
+          </li>
+          <li>
+            <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/anonthedev">twitter</a>
+          </li>
+          <li>
+            <a target="_blank" rel="noopener noreferrer" href="https://peerlist.io/anonthedev">peerlist</a>
+          </li>
+          <li>
+            <a target="_blank" rel="noopener noreferrer" href="https://anontheblogger.medium.com/">medium</a>
+          </li>
+        </ul>
       </section>
     </main>
+
+    <footer class="site-footer">
+      <p>© 2026 pranav kumar · built in india</p>
+    </footer>
   </body>
-  <script src="script.js"></script>
 </html>
