@@ -26,9 +26,7 @@ body {
   background-image: linear-gradient(
       0deg,
       rgba(18, 18, 18, 0.82),
-      rgba(18, 18, 18, 0.82)
-    ),
-    url("./resources/img/grid.webp");
+      rgba(18, 18, 18, 0.82));
   color: var(--text);
   font-family: "Poppins", system-ui, -apple-system, sans-serif;
   font-weight: 300;
