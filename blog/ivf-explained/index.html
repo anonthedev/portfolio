@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What is IVF? | Pranav Kumar</title>
+    <meta name="description" content="IVF stands for inverted file. It speeds up vector search by skipping most of the vectors." />
+    <meta name="author" content="Pranav Kumar" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+    <meta name="theme-color" content="#121212" />
+    <link rel="canonical" href="https://anonthedev.xyz/blog/ivf-explained/" />
+    <link rel="alternate" type="application/rss+xml" title="Writing" href="/blog/feed.xml" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Pranav Kumar" />
+    <meta property="og:title" content="What is IVF? | Pranav Kumar" />
+    <meta property="og:description" content="IVF stands for inverted file. It speeds up vector search by skipping most of the vectors." />
+    <meta property="og:url" content="https://anonthedev.xyz/blog/ivf-explained/" />
+    <meta property="og:locale" content="en_IN" />
+    <meta property="og:image" content="https://anonthedev.xyz/og.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Pranav Kumar. hey, i'm pranav. i engineer applied ai systems." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content="@anonthedev" />
+    <meta name="twitter:title" content="What is IVF? | Pranav Kumar" />
+    <meta name="twitter:description" content="IVF stands for inverted file. It speeds up vector search by skipping most of the vectors." />
+    <meta name="twitter:image" content="https://anonthedev.xyz/og.png" />
+    <meta name="twitter:image:alt" content="Pranav Kumar. hey, i'm pranav. i engineer applied ai systems." />
+    <meta property="article:published_time" content="2026-11-26" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/style.css" />
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "What is IVF?",
+  "description": "IVF stands for inverted file. It speeds up vector search by skipping most of the vectors.",
+  "datePublished": "2026-11-26",
+  "url": "https://anonthedev.xyz/blog/ivf-explained/",
+  "image": "https://anonthedev.xyz/og.png",
+  "inLanguage": "en",
+  "author": {
+    "@id": "https://anonthedev.xyz/#pranav"
+  },
+  "mainEntityOfPage": "https://anonthedev.xyz/blog/ivf-explained/"
+}
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#top">Skip to content</a>
+    <header class="site-header">
+      <nav class="nav" aria-label="Primary">
+        <a class="nav-brand" href="/">pranav</a>
+        <ul class="nav-items">
+          <li><a href="/#work">work</a></li>
+          <li><a href="/#experience">experience</a></li>
+          <li><a href="/#toolkit">toolkit</a></li>
+          <li><a href="/blog/" aria-current="page">writing</a></li>
+          <li><a href="/#hello">hello</a></li>
+          <li>
+            <a class="nav-resume" target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/19a5pm2cy9TrVS72FmJt1GjBqxsj1Bj41/view?usp=sharing">resume</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main id="top" class="main-content">
+      <article class="post">
+        <p class="post-kicker"><a href="/blog/">writing</a> · <time datetime="2026-11-26">26 nov 2026</time></p>
+        <h1>What is IVF?</h1>
+        <p class="lede">IVF stands for inverted file. It speeds up vector search by skipping most of the vectors.</p>
+        <div class="prose">
+<p><strong>IVF</strong> stands for <strong><em>inverted file</em></strong>. It speeds up vector search by skipping most of the vectors. But before getting into all that, let's look at what vector search is.</p>
+<h2>What is vector search?</h2>
+<p>If you search a PDF, you are looking for the exact words. That is <strong>keyword search</strong>. <strong>Vector search</strong> matches by <em>meaning</em>.</p>
+<p>You split the source into chunks and turn each chunk into a vector. You turn the query into a vector too. How that conversion works deserves its own post, so I'm not going to cover it here.</p>
+<p>That vector stands for the meaning of the chunk. Two vectors that point the same way are similar, because the distance I use is the <em>angle</em> between them. How long the vectors are does not change the score. Take the query vector and find the chunk vectors with the smallest angle to it. Those chunks are the closest in meaning.</p>
+<p>Scoring the query against every vector is exact. That full scan is also the slow part. The rest of this post is about how IVF skips most of those scores. Now let's get into what IVF is all about.</p>
+<h2>How IVF works, at a high level</h2>
+<p>IVF speeds up the search process by searching through only selected vectors. The selection is based on clustering and then creating an inverted list of the vectors. We take all the vectors and partition them into different clusters. Then we only search the clusters whose centroids are closest to the query vector. That way, we can cut down the number of vectors that need to be searched by a massive amount. But this comes at a cost of <strong>recall</strong>: you can miss some of the nearest vectors, because they might be sitting at the edge of a cluster or in some other cluster that we didn't search.</p>
+<p>Technically, the two phases are called the <strong>indexing</strong> phase and the <strong>query</strong> phase. Indexing is where you build the clusters and the inverted index.</p>
+<h2>The clustering part</h2>
+<p>IVF searches fewer vectors because it divides them into clusters. It uses <strong>k-means clustering</strong> to split the vector space into regions called <strong>Voronoi cells</strong>. A Voronoi cell is the region of space that is closer to one centroid than to any other centroid. The <strong>centroid</strong> represents the cluster, and it is the <em>mean</em> of the vectors in that cluster.</p>
+<p>k-means finds the centroids in a loop:</p>
+<ol><li>It starts with random guesses for the centroids.</li><li>It assigns every vector to the closest centroid.</li><li>It moves each centroid to the mean of the vectors assigned to it.</li><li>It repeats steps 2 and 3 until the assignments stop changing.</li></ol>
+<p>At that point, we have our clusters.</p>
+<p>The <strong>objective function</strong> measures how good the clusters are, and k-means tries to make it as small as possible. It is the sum of the squared distances from each vector to its own centroid. A small sum means the vectors sit close to their centroids. A big sum means the clusters are spread out. So, <em>the smaller, the better</em>. We rarely get to say that, but that's the case here.</p>
+<p>In my implementation, I used the angle between vectors as my distance, so I &lt;u&gt;normalize every vector to length 1 before clustering&lt;/u&gt;. Without that step, k-means groups vectors by straight-line distance, and straight-line distance is not the same as angle.</p>
+<p>The <strong><em>k</em></strong> in k-means clustering, meaning how many clusters the vector space should be divided into, is very important. It directly affects the cost and how efficient querying will be later on. In practice, setting <em>k</em> anywhere from <strong>4 × √n to 16 × √n</strong> works well, where <em>n</em> is the number of vectors in the vector space.</p>
+<h2>The indexing part</h2>
+<p>Now that we have our clusters, we need a data structure that tells us which vectors each centroid holds. Right now, we can only answer <em>&quot;Which cluster is this vector assigned to?&quot;</em> After we build the inverted index, we can answer <em>&quot;Which vectors are in this cluster?&quot;</em>, and that is the question a search needs. This flip gives IVF its name: <strong>inverted file</strong>.</p>
+<p>The index stores the list of centroids. For each centroid, it stores a list of the vector IDs in that cluster. Most implementations also store each cluster's vectors next to each other in memory, so scanning one cluster is fast. At query time, we open the lists of the clusters we picked and skip every other cluster.</p>
+<h2>The querying part</h2>
+<p>Now for the part that saves you time: querying. Querying finds the vectors most similar to your query, so you first turn the query into a vector too.</p>
+<p>A flat index compares the query against every vector. At query time, IVF compares the query vector against the centroids first. Then it searches only the vectors inside the closest clusters.</p>
+<p>The catch is deciding how many clusters to search. That number is called <strong>nprobe</strong>. With nprobe set to 6, IVF searches the vectors in the 6 closest clusters and skips the rest. A higher nprobe finds more of the true nearest neighbours but searches more slowly. A lower nprobe is faster but can miss neighbours that sit just across a cluster boundary. &lt;u&gt;You pick nprobe by measuring recall and latency on your own data.&lt;/u&gt;</p>
+<p><em>nprobe</em> depends on many factors, like how well the data is clustered, the number of centroids, etc. That's why, as I mentioned above, picking the correct <em>k</em> for clustering is very important.</p>
+<h2>The boundary problem</h2>
+<p>Each vector belongs to <strong>one cluster only</strong>. IVF first searches the cluster whose centroid is closest to the query. A vector just across the boundary, in the next cluster, can be closer to the query than most of the vectors IVF scans. If the query lands near that boundary, its nearest neighbour may be in the next cell. With nprobe set to 1, IVF never opens that cell and misses the neighbour.</p>
+<p><strong>Raising nprobe is the main fix.</strong> Each extra cluster covers more of the space around the query, so IVF also scans the neighbours just across a boundary. Every added cluster costs more time. With 1,000 clusters and nprobe set to 10, IVF scans about <strong>1%</strong> of the vectors. With nprobe set to 100, it scans about <strong>10%</strong>.</p>
+<p>There are two other fixes:</p>
+<ul><li><strong>Store boundary vectors in more than one cluster.</strong> This uses more memory but needs a smaller nprobe.</li><li><strong>Use fewer, bigger clusters.</strong> Fewer vectors sit near an edge, but each cluster takes longer to scan.</li></ul>
+<h2>How dimensionality affects IVF</h2>
+<p>Embedding models output vectors with hundreds or thousands of dimensions. At that size, the distance from a query to its nearest vector and the distance to its farthest vector get closer together. Near and far vectors become harder to tell apart.</p>
+<p>This hurts IVF in two ways:</p>
+<ol><li><strong>k-means finds weaker clusters</strong>, because each vector is only a little closer to one centroid than to the others.</li><li><strong>More vectors sit near a boundary</strong>, so the query's true neighbours spread across more clusters.</li></ol>
+<p>To keep the same recall at a higher dimension, you need a &lt;u&gt;higher nprobe&lt;/u&gt;.</p>
+<p>Each comparison also gets slower, because a distance takes one multiplication per dimension. Scoring a 1,536-dimension vector costs <strong>four times</strong> as much as scoring a 384-dimension one. This applies to both the centroid comparisons and the cluster scans.</p>
+<p>Text embeddings make the problem smaller. They don't fill their space evenly. They group around topics, so k-means finds useful clusters even at 1,536 dimensions. If search is still too slow, lower the dimension with <strong>PCA</strong> or use an embedding model with shorter vectors. Both cost a small amount of accuracy.</p>
+<h2>My implementation</h2>
+<p>I built IVF from scratch in Go as part of <strong>vecsearch</strong>, my implementation of different vector search algorithms. You can find the code here: <a href="https://github.com/anonthedev/vecsearch" target="_blank" rel="noopener noreferrer">github.com/anonthedev/vecsearch</a></p>
+        </div>
+      </article>
+    </main>
+    <footer class="site-footer">
+      <p>© 2026 pranav kumar · built in india · updated november 2026</p>
+    </footer>
+  </body>
+</html>

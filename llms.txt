@@ -24,6 +24,14 @@ Pranav Kumar (anonthedev) engineers applied AI systems. The core of his work inv
 - Frameworks: FastAPI, Next.js, React, Electron, NestJS
 - Data and infra: PostgreSQL, Supabase, sqlite-vec, Modal, Inngest
 
+## Writing
+
+Notes on retrieval, queues, and running LLMs: https://anonthedev.xyz/blog/
+
+<!-- writing-posts:start -->
+- [What is IVF?](https://anonthedev.xyz/blog/ivf-explained/): IVF stands for inverted file. It speeds up vector search by skipping most of the vectors.
+<!-- writing-posts:end -->
+
 ## Contact
 
 - Site: https://anonthedev.xyz/

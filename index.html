@@ -14,9 +14,11 @@
     <meta name="theme-color" content="#121212" />
     <link rel="canonical" href="https://anonthedev.xyz/" />
     <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-readable summary" />
+    <link rel="alternate" type="application/rss+xml" title="Writing" href="/blog/feed.xml" />
 
     <!-- Open Graph / Twitter -->
     <meta property="og:type" content="profile" />
+    <meta property="og:site_name" content="Pranav Kumar" />
     <meta property="og:title" content="Pranav Kumar | Applied AI and GenAI Engineer" />
     <meta
       property="og:description"
@@ -24,13 +26,20 @@
     />
     <meta property="og:url" content="https://anonthedev.xyz/" />
     <meta property="og:locale" content="en_IN" />
-    <meta name="twitter:card" content="summary" />
+    <meta property="og:image" content="https://anonthedev.xyz/og.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Pranav Kumar. hey, i'm pranav. i engineer applied ai systems." />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:creator" content="@anonthedev" />
     <meta name="twitter:title" content="Pranav Kumar | Applied AI and GenAI Engineer" />
     <meta
       name="twitter:description"
       content="Applied AI and GenAI engineer. Retrieval pipelines, background processing queues, and the infrastructure to run LLMs reliably."
     />
+    <meta name="twitter:image" content="https://anonthedev.xyz/og.png" />
+    <meta name="twitter:image:alt" content="Pranav Kumar. hey, i'm pranav. i engineer applied ai systems." />
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -55,7 +64,13 @@
             "url": "https://anonthedev.xyz/",
             "name": "Pranav Kumar | Applied AI and GenAI Engineer",
             "description": "Applied AI and GenAI engineer specializing in retrieval pipelines, background processing queues, and production-grade LLM infrastructure.",
-            "dateModified": "2026-10-09",
+            "dateModified": "2026-11-23",
+            "primaryImageOfPage": {
+              "@type": "ImageObject",
+              "url": "https://anonthedev.xyz/og.png",
+              "width": 1200,
+              "height": 630
+            },
             "inLanguage": "en",
             "mainEntity": { "@id": "https://anonthedev.xyz/#pranav" }
           },
@@ -68,6 +83,7 @@
             "description": "Applied AI and GenAI engineer. Builds retrieval pipelines, background processing queues, and the infrastructure to run LLMs reliably. Open to new work.",
             "email": "mailto:anonthedev.js@gmail.com",
             "url": "https://anonthedev.xyz/",
+            "image": "https://anonthedev.xyz/og.png",
             "address": {
               "@type": "PostalAddress",
               "addressCountry": "IN"
@@ -157,6 +173,7 @@
           <li><a href="#work">work</a></li>
           <li><a href="#experience">experience</a></li>
           <li><a href="#toolkit">toolkit</a></li>
+          <li><a href="/blog/">writing</a></li>
           <li><a href="#hello">hello</a></li>
           <li>
             <a
@@ -446,9 +463,26 @@
         </dl>
       </section>
 
+      <!-- writing:start -->
+      <section id="writing" class="section" aria-labelledby="writing-heading">
+        <p class="section-label">04 · writing</p>
+        <h2 id="writing-heading" class="section-title">notes from the work.</h2>
+        <ol class="writing-list">
+          <li>
+            <a href="/blog/ivf-explained/">
+              <p class="post-kicker"><time datetime="2026-11-26">26 nov 2026</time></p>
+              <h3 class="post-title">What is IVF?</h3>
+              <p class="post-desc">IVF stands for inverted file. It speeds up vector search by skipping most of the vectors.</p>
+            </a>
+          </li>
+        </ol>
+        <p class="links"><a href="/blog/">all writing</a></p>
+      </section>
+      <!-- writing:end -->
+
       <!-- 04 Hello -->
       <section id="hello" class="section" aria-labelledby="hello-heading">
-        <p class="section-label">04 · hello</p>
+        <p class="section-label" id="hello-label">05 · hello</p>
         <h2 id="hello-heading" class="section-title">
           send me the interesting problem.
         </h2>
@@ -483,7 +517,7 @@
     </main>
 
     <footer class="site-footer">
-      <p>© 2026 pranav kumar · built in india · updated october 2026</p>
+      <p>© 2026 pranav kumar · built in india · updated november 2026</p>
     </footer>
   </body>
 </html>
