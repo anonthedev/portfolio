@@ -19,7 +19,7 @@ Then run:
 
 The filename is the URL: posts/my-note.md becomes /blog/my-note/.
 Files named _*.md, and posts with `draft: true`, are not published.
-Optional frontmatter: image: /path-or-https-url.png
+Each post gets its own share image at /blog/<slug>/og.png.
 """
 
 from __future__ import annotations
@@ -68,13 +68,11 @@ class Post:
 
     @property
     def image_url(self) -> str:
-        if not self.image:
-            return f"{SITE}/og.png"
-        if self.image.startswith(("http://", "https://")):
-            return self.image
-        if self.image.startswith("/"):
-            return SITE + self.image
-        return f"{SITE}/{self.image}"
+        return f"{SITE}/blog/{self.slug}/og.png"
+
+    @property
+    def image_alt(self) -> str:
+        return f"{self.title} — Pranav Kumar, {self.date_label}"
 
 
 def esc(value: str) -> str:
@@ -508,7 +506,7 @@ def page(
     extra_meta: str = "",
 ) -> str:
     dims = ""
-    if image == f"{SITE}/og.png":
+    if image.startswith(f"{SITE}/") and image.endswith(".png"):
         dims = """
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
@@ -564,6 +562,82 @@ def page(
   </body>
 </html>
 """
+
+
+def font_file(name: str) -> Path:
+    cache = Path("/tmp/poppins")
+    cache.mkdir(exist_ok=True)
+    path = cache / name
+    if path.exists() and path.stat().st_size > 1000:
+        return path
+    url = f"https://github.com/google/fonts/raw/main/ofl/poppins/{name}"
+    import urllib.request
+
+    urllib.request.urlretrieve(url, path)
+    return path
+
+
+def render_post_og(post: Post, dest: Path) -> None:
+    from PIL import Image, ImageDraw, ImageFont
+
+    width, height = 1200, 630
+    scale = 2
+    image = Image.new("RGB", (width * scale, height * scale), "#121212")
+    draw = ImageDraw.Draw(image)
+    text = "#e0e2dc"
+    muted = "#a3a3a3"
+    accent = "#ffc42c"
+    pad = 84 * scale
+    max_width = (width - 168) * scale
+
+    def measure(font, value: str) -> int:
+        box = draw.textbbox((0, 0), value, font=font)
+        return box[2] - box[0]
+
+    def wrap(value: str, font) -> list[str]:
+        lines: list[str] = []
+        current = ""
+        for word in value.split():
+            trial = word if not current else f"{current} {word}"
+            if measure(font, trial) <= max_width:
+                current = trial
+            else:
+                if current:
+                    lines.append(current)
+                current = word
+        if current:
+            lines.append(current)
+        return lines or [""]
+
+    size = 72
+    title_font = ImageFont.truetype(font_file("Poppins-Medium.ttf"), size * scale)
+    lines = wrap(post.title, title_font)
+    while (len(lines) > 3 or any(measure(title_font, line) > max_width for line in lines)) and size > 46:
+        size -= 4
+        title_font = ImageFont.truetype(font_file("Poppins-Medium.ttf"), size * scale)
+        lines = wrap(post.title, title_font)
+
+    meta_font = ImageFont.truetype(font_file("Poppins-Regular.ttf"), 24 * scale)
+    domain_font = ImageFont.truetype(font_file("Poppins-Regular.ttf"), 22 * scale)
+
+    meta_y = 92 * scale
+    draw.text((pad, meta_y), "Pranav Kumar", font=meta_font, fill=muted)
+    date = post.date_label
+    draw.text((width * scale - pad - measure(meta_font, date), meta_y), date, font=meta_font, fill=muted)
+
+    rule_y = meta_y + 24 * scale + 26 * scale
+    draw.rectangle((pad, rule_y, pad + 42 * scale, rule_y + 4 * scale), fill=accent)
+
+    line_height = int(size * scale * 1.16)
+    title_y = rule_y + 4 * scale + 32 * scale
+    for index, line in enumerate(lines[:4]):
+        draw.text((pad, title_y + index * line_height), line, font=title_font, fill=text)
+
+    domain = "anonthedev.xyz"
+    draw.text((pad, height * scale - 72 * scale - 22 * scale), domain, font=domain_font, fill=muted)
+
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    image.resize((width, height), Image.Resampling.LANCZOS).save(dest, "PNG", optimize=True)
 
 
 def write_blog(posts: list[Post]) -> None:
@@ -635,6 +709,7 @@ def write_blog(posts: list[Post]) -> None:
     )
 
     for post in posts:
+        render_post_og(post, BLOG / post.slug / "og.png")
         extra = f'\n    <meta property="article:published_time" content="{post.date.isoformat()}" />'
         body = f"""      <article class="post">
         <p class="post-kicker"><a href="/blog/">writing</a> · <time datetime="{post.date.isoformat()}">{esc(post.date_label)}</time></p>
@@ -653,7 +728,7 @@ def write_blog(posts: list[Post]) -> None:
                 body=body,
                 og_type="article",
                 image=post.image_url,
-                image_alt=post.title if post.image else OG_ALT,
+                image_alt=post.image_alt,
                 json_ld={
                     "@context": "https://schema.org",
                     "@type": "BlogPosting",
